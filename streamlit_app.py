@@ -12,6 +12,4 @@ collection = db["streamlit.sample-data"]
 
 # Example: Query data from MongoDB and display it in your Streamlit app
 data = collection.find({"name":"Jane Doe"})
-
-for document in data:
-    st.write(data)
+st.write(data)
