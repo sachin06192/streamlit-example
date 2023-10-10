@@ -11,7 +11,8 @@ db = client["Cluster0"]
 collection = db["streamlit.sample-data"]
 
 # Example: Query data from MongoDB and display it in your Streamlit app
-data = collection.find({"name":"Jane Doe"})
+cursor = collection.find({"name":"Jane Doe"})
+data = list(cursor)
 for document in data:
   st.write(document)
 
