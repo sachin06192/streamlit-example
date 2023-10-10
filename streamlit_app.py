@@ -12,7 +12,7 @@ collection = db["streamlit.sample-data"]
 
 # Example: Query data from MongoDB and display it in your Streamlit app
 cursor = collection.find({"name":"Jane Doe"})
-if cursor.count() == 0:
+if cursor.count_documents({}) == 0:
     st.write("No documents found.")
 else:
     data = list(cursor)
