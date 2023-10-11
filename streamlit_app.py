@@ -1,12 +1,14 @@
 import pymongo
 import streamlit as st
+import certifi
 
 # Connect to MongoDB Atlas
 #client = pymongo.MongoClient("mongodb+srv://sachintest:JZHyLgBIIFngFHcP@cluster0.wmki6co.mongodb.net/")
 
 try:
+    ca = certifi.where()
     # Attempt to establish a connection
-    client = pymongo.MongoClient("mongodb+srv://sachintest:JZHyLgBIIFngFHcP@cluster0.wmki6co.mongodb.net/")
+    client = pymongo.MongoClient("mongodb+srv://sachintest:JZHyLgBIIFngFHcP@cluster0.wmki6co.mongodb.net/", tlsCAFile=ca)
     st.write("MongoDB connection established successfully.")
     # Access a specific database
     db = client["testdb"]
