@@ -1,6 +1,7 @@
 import pymongo
 import streamlit as st
 import certifi
+import ssl
 
 # Connect to MongoDB Atlas
 #client = pymongo.MongoClient("mongodb+srv://sachintest:JZHyLgBIIFngFHcP@cluster0.wmki6co.mongodb.net/")
