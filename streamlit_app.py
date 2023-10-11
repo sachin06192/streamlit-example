@@ -9,7 +9,7 @@ import ssl
 try:
     ca = certifi.where()
     # Attempt to establish a connection
-    client = pymongo.MongoClient("mongodb+srv://sachintest:JZHyLgBIIFngFHcP@cluster0.wmki6co.mongodb.net/", ssl_cert_reqs=ssl.CERT_NONE)
+    client = pymongo.MongoClient("mongodb+srv://sachintest:JZHyLgBIIFngFHcP@cluster0.wmki6co.mongodb.net/testdb?ssl=true&ssl_cert_reqs=CERT_NONE")
     st.write("MongoDB connection established successfully.")
     # Access a specific database
     db = client["testdb"]
